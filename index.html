@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs-3.3.7/jqc-1.12.4/jszip-2.5.0/pdfmake-0.1.18/dt-1.10.13/b-1.2.4/b-colvis-1.2.4/b-flash-1.2.4/b-html5-1.2.4/b-print-1.2.4/datatables.min.css"/>
+  <meta charset="utf-8">
+  <title>FID in der ZDB</title>
+</head>
+<body>
+  <script type="text/javascript" src="https://cdn.datatables.net/v/bs-3.3.7/jqc-1.12.4/jszip-2.5.0/pdfmake-0.1.18/dt-1.10.13/b-1.2.4/b-colvis-1.2.4/b-flash-1.2.4/b-html5-1.2.4/b-print-1.2.4/datatables.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+  <script src="js/csv_to_html_table.js"></script>
+    <script type="text/javascript" class="init">
+      jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+        "numeric-comma-pre": function ( a ) {
+          a = a.replace(/.+>(.+)<\/a>/,"$1");
+          var x = (a == "-") ? 0 : a.replace( /,/, "." );
+          return parseFloat( x );
+        },
+        "numeric-comma-asc": function ( a, b ) {
+          a = a.replace(/.+>(.+)<\/a>/,"$1");
+          b = b.replace(/.+>(.+)<\/a>/,"$1");
+          return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+        },
+        "numeric-comma-desc": function ( a, b ) {
+          a = a.replace(/.+>(.+)<\/a>/,"$1");
+          b = b.replace(/.+>(.+)<\/a>/,"$1");
+          return ((a < b) ? 1 : ((a > b) ? -1 : 0));
+        }
+      } );
+      $(document).ready(function () {
+        init_table({
+          csv_path: 'fid.csv',
+          element: 'fid',
+          csv_options: {
+            "separator": ","
+          },
+          datatables_options: {
+            "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "alle"]],
+            "order": [[0, "asc"]],
+            "paging": true,
+            "oLanguage": {
+              "sSearch": "Suche:",
+              "sInfo": "Eintrag _START_ bis _END_ von _TOTAL_",
+              "sInfoFiltered": " (gefiltert von _MAX_ Einträgen)",
+              "sLengthMenu": "Zeige _MENU_ Einträge",
+              "oPaginate": {
+                "sNext": "Nächste Seite",
+                "sPrevious": "Vorherige Seite"
+              }
+            },
+            "columnDefs": [{
+                "render": function (data, type, row) {
+                  var link = '<a href="http://ld.zdb-services.de/resource/organisations/' + data + '" class="extern">' + data + '</a>';
+                  return link;
+                },
+                "targets": 3
+              },
+              {
+                "render": function (data, type, row) {
+                  var link = '<a href="http://dispatch.opac.d-nb.de/CMD?ACT=SRCHA&IKT=8530&SRT=LST_ty&TRM=' + data + '" class="extern">' + data + '</a>';
+                  return link;
+                },
+                "targets": 0
+              },
+              {
+                "type": 'numeric-comma', "targets": 0
+              }
+            ],
+            "dom": 'lf<t>ip<"clear"><B>',
+            "buttons": [{
+                "extend": 'csv',
+                "text": 'Export CSV',
+                "exportOptions": {
+                  "modifier": {
+                    "search": 'none'
+                  }
+                }
+              }, {
+                "extend": 'pdf',
+                "text": 'als PDF speichern',
+                "exportOptions": {
+                  "modifier": {
+                    "page": 'current'
+                  }
+                }
+              }
+            ]
+          }
+        });
+      });
+    </script>
+    <h1>Übersicht der Fachinformationsdienste (FID) in der Zeitschriftendatenbank (ZDB)</h1>
+    <div id="fid"></div>
+</body>
+</html>
