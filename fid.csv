@@ -18,7 +18,7 @@ FID-LATAM-DE-204,"FID Lateinamerika, Karibik und Latino Studies",IAI Berlin,DE-2
 FID-ROM-DE-5,FID Romanistik,UB Uni Bonn,DE-5
 FID-ROM-DE-18,FID Romanistik,SUB Hamburg,DE-18
 FID-GEO-DE-7,FID Geowissenschaften der festen Erde,SUB Göttingen,DE-7
-FID-GEO-DE-B103,FID Geowissenschaften der festen Erde,Bibliothek Wissenschafts­park Albert Einstein,DE-B103
+FID-GEO-DE-B103,FID Geowissenschaften der festen Erde,Bibliothek Wissenschaftspark Albert Einstein,DE-B103
 FID-ALT-DE-12,FID Altertumswissenschaften – Propylaeum,BSB München,DE-12
 FID-ALT-KA-DE-16,FID Altertumswissenschaften – Propylaeum,FID Altertumswissenschaften – Propylaeum,DE-16
 FID-ALT-AY-DE-16,FID Altertumswissenschaften – Propylaeum,FID Altertumswissenschaften – Propylaeum,DE-16
@@ -28,8 +28,8 @@ FID-HIST-DE-210,FID Geschichtswissenschaft,Bibliothek des Deutschen Museums,DE-2
 FID-SKA-DE-11,FID Sozial- und Kulturanthropologie,HU Berlin,DE-11
 FID-REWI-DE-21,FID Religionswissenschaft,UB Tübingen,DE-21
 FID-JUDAICA-DE-30,FID Jüdische Studien,UB Frankfurt,DE-30
-FID-AAC-DE-7,FID Anglo-American Culture (FID Anglistik/Großbritannien- und Irlandstudien; FID Amerikastudien; FID Kanadastudien; FID Australien- und Neuseelandstudien),SUB Göttingen;,DE-7
-FID-AAC-DE-188-144,FID Anglo-American Culture (FID Anglistik/Großbritannien- und Irlandstudien; FID Amerikastudien; FID Kanadastudien; FID Australien- und Neuseelandstudien),Bibliothek des John F. Kennedy-Instituts der FU Berlin,DE-188-144
+FID-AAC-DE-7,FID Anglo-American Culture,SUB Göttingen;,DE-7
+FID-AAC-DE-188-144,FID Anglo-American Culture,Bibliothek des John F. Kennedy-Instituts der FU Berlin,DE-188-144
 FID-MONTAN-DE-105,FID Montan (Bergbau und Hüttenwesen),"Universitätsbibliothek ""Georgius Agricola"" der TU Bergakademie Freiberg",DE-105
 FID-POL-DE-46,FID Politikwissenschaft,SuUB Bremen; GESIS,DE-46
 FID-ASIEN-DE-1a,FID Asien – CrossAsia,Staatsbibliothek zu Berlin,DE-1a
@@ -42,3 +42,13 @@ FID-SLAW-DE-1a,FID Slawistik,Staatsbibliothek zu Berlin,DE-1a
 FID-BENELUX-DE-6,FID Benelux / Low Countries Studies,Universitäts- und Landesbibliothek Münster,DE-6
 FID-NAHOST-DE-3,"FID Nahost-, Nordafrika- und Islamstudien",ULB Sachsen-Anhalt,DE-3
 FID-NORD-DE-8,FID Nordeuropa,UB Kiel,DE-8
+FID-FINNUG-DE-7,"FID Finnisch-ugrische / uralische Sprachen, Literaturen und Kulturen",DE-7
+FID-LING-DE-30,FID Linguistik,DE-30
+FID-BIODIV-DE-30,FID Biodiversitätsforschung,DE-30
+FID-BBI-DE-23,"FID Buch-, Bibliotheks- und Informationswissenschaft",DE-23
+FID-GER-DE-30,FID Germanistik,DE-30
+FID-MOVE-DE-14,FID Mobilitäts- und Verkehrsforschung,DE-14
+FID-ZENTRALASIEN-DE-7,FID Zentralasien - Autochthone Kulturen und Sprachen,DE-7
+FID-PHILOS-DE-38,FID Philosophie,DE-38
+FID-PHILOS-DE-12,FID Philosophie,DE-12
+FID-SUEDASIEN-DE-16,FID Südasien,DE-16
